@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package raydium_clmm;
+
+message SwapEvents {
+    repeated SwapEvent events = 1;
+}
+
+message SwapEvent {
+    string poolState = 1;
+    string sender = 2;
+    string token_account_0 = 3;
+    string token_account_1 = 4;
+    uint64 amount_0 = 5;
+    uint64 transfer_fee_0 = 6;
+    uint64 amount_1 = 7;
+    uint64 transfer_fee_1 = 8;
+    bool zero_for_one = 9;
+    uint64 sqrt_price_x64 = 10;
+    uint64 liquidity = 11;
+    int32 tick = 12;
+}

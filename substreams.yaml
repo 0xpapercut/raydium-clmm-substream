@@ -1,0 +1,25 @@
+specVersion: v0.1.0
+package:
+  name: 'raydium_clmm_events'
+  version: v0.1.0
+
+protobuf:
+  files:
+    - raydium_clmm.proto
+  importPaths:
+    - ./proto
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/raydium_clmm_substream.wasm
+
+modules:
+  - name: raydium_clmm_swap_events
+    kind: map
+    inputs:
+      - source: sf.solana.type.v1.Block
+    output:
+      type: proto:raydium_clmm.SwapEvents
+
+network: solana
