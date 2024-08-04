@@ -474,6 +474,7 @@ dependencies = [
  "substreams",
  "substreams-solana",
  "substreams-solana-program-instructions",
+ "substreams-solana-utils",
 ]
 
 [[package]]
@@ -624,6 +625,28 @@ dependencies = [
  "anyhow",
  "num_enum",
  "substreams",
+]
+
+[[package]]
+name = "substreams-solana-spl-token"
+version = "0.1.0"
+source = "git+https://github.com/0xpapercut/substreams-solana-spl-token?branch=main#4c879aa7505b5b7aa177f8a5ba5821baabaf0c82"
+dependencies = [
+ "substreams-solana-program-instructions",
+]
+
+[[package]]
+name = "substreams-solana-utils"
+version = "0.1.0"
+source = "git+https://github.com/0xpapercut/substreams-solana-utils?branch=dev#93383ec9d72670ffaf971d55974218ac0b1cb3d4"
+dependencies = [
+ "base64",
+ "bs58 0.5.1",
+ "regex",
+ "substreams",
+ "substreams-solana",
+ "substreams-solana-program-instructions",
+ "substreams-solana-spl-token",
 ]
 
 [[package]]
